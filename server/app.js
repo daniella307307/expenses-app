@@ -8,7 +8,7 @@ const expenseRoutes = require("./routes/expenseRoute");
 
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 // Connect to MongoDB
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected"))
